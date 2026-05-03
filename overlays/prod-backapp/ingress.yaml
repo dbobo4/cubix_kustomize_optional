@@ -1,0 +1,16 @@
+﻿apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: backapp
+spec:
+  rules:
+  - host: other.cubix.localhost
+    http:
+      paths:
+      - path: /prod
+        pathType: Prefix
+        backend:
+          service:
+            name: backapp
+            port:
+              number: 80

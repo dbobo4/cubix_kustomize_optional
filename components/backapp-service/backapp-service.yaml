@@ -1,0 +1,17 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: backapp
+  labels:
+    app: backapp
+    training: block4
+    optional: backapp
+spec:
+  selector:
+    app: backapp
+    training: block4
+    optional: backapp
+  ports:
+  - name: web
+    port: 80
+    targetPort: web

@@ -1,11 +1,14 @@
-﻿namespace: hw4-optional-dev-backapp
+﻿namespace: hw4-optional-test-both
 
 resources:
 - https://github.com/drsylent/cubix-cloudnativev2-block4-optional//base?ref=main
 - ingress.yaml
 
 components:
+- https://github.com/drsylent/cubix-cloudnativev2-block4-optional//components/frontapp?ref=main
 - ../../components/backapp-service
+- ../../components/frontapp-service
 
 patches:
 - path: patch-backapp-message.yaml
+- path: patch-frontapp-env.yaml
