@@ -2,6 +2,8 @@
 kind: Ingress
 metadata:
   name: frontapp
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /frontapp
 spec:
   rules:
   - host: application.cubix.localhost

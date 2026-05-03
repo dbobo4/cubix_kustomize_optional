@@ -2,6 +2,8 @@
 kind: Ingress
 metadata:
   name: backapp
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /backapp
 spec:
   rules:
   - host: other.cubix.localhost
