@@ -6,6 +6,4 @@ resources:
 
 components:
 - ../../components/backapp-service
-
-patches:
-- path: patch-backapp-message.yaml
+- ../../components/backapp-env-configured
